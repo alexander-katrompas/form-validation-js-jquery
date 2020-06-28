@@ -8,12 +8,13 @@ function clearForm() {
     document.getElementById("first-name").value = "";
     document.getElementById("last-name").value = "";
     /* NOTE: This next line violates the division of concerns rule,
-     but it's okay for this assigment. We will fix this later.
+     but it's okay for now. We will fix this later.
      */
     document.getElementById("msg").innerHTML = "<br>";
 }
 
 function validate() {
+    // start with an empty error message
     var errorMessage = "";
 
     //get all the elements into the function
@@ -24,7 +25,7 @@ function validate() {
     var fname = fNameInput.value.trim();
     var lname = lNameInput.value.trim();
 
-    //put the trimmed versions back into the form for good iser experience (UX)
+    //put the trimmed versions back into the form for good user experience (UX)
     fNameInput.value = fname;
     lNameInput.value = lname;
 
@@ -47,7 +48,7 @@ var sendBtn = document.getElementById("names-send");
 
 //create an event listener and handler for the send button
 sendBtn.onclick = function () {
-    //bring the message area in in-case we need it to report errors
+    //bring the message area in to report errors or "Sent!"
     var msgArea = document.getElementById("msg");
     //get the validation of the form
     var msg = validate();
