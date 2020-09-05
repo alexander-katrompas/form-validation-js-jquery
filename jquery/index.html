@@ -17,7 +17,7 @@
             </div>
             <div id="form-div">
                 <!-- notice the form attributes, you need all of them for the form to work -->
-                <form id="names-form">
+                <form id="names-form" name="names-form" action="process.php" method="post">
                     <div class="input-div">
                         <input type="text" class="form-input" id="first-name" name="fname" placeholder="First Name" maxlength="64" value="">
                     </div>
@@ -28,7 +28,7 @@
                         <!-- These are not HTML send and clear buttons. They are generic buttons to which
                         we will attach handlers to make them work as submit and clear buttons
                         This is proper professional technique. -->
-                        <button id="names-send" type="button" class="">Send</button>&nbsp;&nbsp;
+                        <button id="names-send" type="submit" class="">Send</button>&nbsp;&nbsp;
                         <button id="names-clear" type="button" class="">Clear</button>
                     </div>
                 </form>

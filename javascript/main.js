@@ -54,8 +54,6 @@ sendBtn.onclick = function () {
     var msg = validate();
     //report errors or submit the form
     if (msg === "") {
-        clearForm();
-        msgArea.innerHTML = "Sent!";
         return true;
     } else {
         msgArea.innerHTML = msg;
