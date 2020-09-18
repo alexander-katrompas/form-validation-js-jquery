@@ -1,6 +1,30 @@
 # form-validation-js-jquery
 
-There are two complete simple websites (1 page) in this repository. The both have the exact same functionality. They are a simple contact form with client-side form validation. One uses raw JavaScript. One uses jQuery.
+There are four complete simple websites (1 page each) in this repository. To
+use any of them, place the files from any one of the folders in the root of
+your local project or in your public_html directory and load the index.html
+page in your browser.
+
+The sites are as follows:
+
+ - javascript/ contains an example of client-side processing that does not
+   submit to the server. It simply "fakes" it by clearing the form and
+   displaying "Sent!"
+
+ - jquery/ contains an example of client-side processing that does not
+   submit to the server. It simply "fakes" it by clearing the form and
+   displaying "Sent!" It is identical in functionality to the JavaScript
+   version but it uses jQuery instead.
+
+ - javascript-with-server/ contains an example of client-side processing that
+   DOES submit to the server. It will submit to the server, be processed by
+   process.php, which will simply dump the POST array back to the browser.
+
+ - jquery-with-server/ contains an example of client-side processing that
+   DOES submit to the server. It will submit to the server, be processed by
+   process.php, which will simply dump the POST array back to the browser.
+   It is identical in functionality to the JavaScript version but it
+   uses jQuery instead.
 
 jQuery is a library that "wraps" JavaScript with simpler syntax. jQuery is not a new language, it is simply a wrapper around JavaScript that uses JavaScript itself to create simpler JavaScript syntax. i.e. it makes JavaScript easier. For example...
 
