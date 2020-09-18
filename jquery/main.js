@@ -54,10 +54,10 @@ $(document).ready(function () {
         var msg = validate();
         // report errors or submit the form
         if (msg === "") {
-            return true;
+            clearForm(); // call this first or it will erase the Sent! message
+            $("#msg").html("Sent!");
         } else {
             $("#msg").html(msg);
-            return false;
         }
     });
 

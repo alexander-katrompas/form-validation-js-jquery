@@ -54,10 +54,10 @@ sendBtn.onclick = function () {
     var msg = validate();
     //report errors or submit the form
     if (msg === "") {
-        return true;
+        clearForm(); // call this first or it will erase the Sent! message
+        msgArea.innerHTML = "Sent!";
     } else {
         msgArea.innerHTML = msg;
-        return false;
     }
 };
 
