@@ -53,10 +53,13 @@ $(document).ready(function () {
         // validate form and get back error messages (if any)
         var msg = validate();
         // report errors or submit the form
+        // returning true or false is what allows the form to submit or not
         if (msg === "") {
+            // will trigger the form to submit
             return true;
         } else {
             $("#msg").html(msg);
+            // will prevent the form from submitting
             return false;
         }
     });
