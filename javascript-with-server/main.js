@@ -48,6 +48,8 @@ var sendBtn = document.getElementById("names-send");
 
 //create an event listener and handler for the send button
 sendBtn.onclick = function () {
+    // will prevent the form from submitting if there is an error
+    let submit = false;
     //bring the message area in to report errors or "Sent!"
     var msgArea = document.getElementById("msg");
     //get the validation of the form
@@ -55,13 +57,12 @@ sendBtn.onclick = function () {
     //report errors or submit the form
     // returning true or false is what allows the form to submit or not
     if (msg === "") {
-        // will trigger the form to submit
-        return true;
+        // will allow the form to submit
+        submit = true;
     } else {
         msgArea.innerHTML = msg;
-        // will prevent the form from submitting
-        return false;
     }
+    return submit;
 };
 
 //get the button into a JS object
